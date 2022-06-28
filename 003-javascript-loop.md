@@ -1,7 +1,7 @@
 ### JavaScript for loop, while loop
 loops are used to repeat a block of code.
 
-** 1. JavaScript for loop**
+**JavaScript for loop**
 The syntax of the **for** loop is:
 
 ```node
@@ -125,7 +125,7 @@ for(let i = 1; i > 0; i++) {
 }
 ```
 
-** 2. while loop**
+**while loop**
 
 ```node
 let x = 10;
@@ -139,7 +139,7 @@ while(x > 0){
 }
 ```
 
-** 3. Do while loop**
+**Do while loop**
 
 ```node 
 var i = 20;
@@ -160,7 +160,7 @@ do{
 25
 ```
 
-** 4. for-in loop**
+**for-in loop**
 
 ```node
 j = {name: "mern", type: 'course', lang: 'javascript'}
@@ -175,6 +175,5 @@ for(let k in j){
 
 
 **Reference**
-
-[JavaScript Loops Explained](https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/)
+[JavaScript Loops Explained](https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/),
 [JavaScript Loops](https://www.javatpoint.com/javascript-loop)
