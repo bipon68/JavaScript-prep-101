@@ -1,7 +1,7 @@
-### JavaScript for loop
+### JavaScript for loop, while loop
 loops are used to repeat a block of code.
 
-**JavaScript for loop**
+** 1. JavaScript for loop**
 The syntax of the **for** loop is:
 
 ```node
@@ -115,6 +115,7 @@ When **i** becomes **101**, the test condition is **false** and **sum** will be 
 
 
 **JavaScript Infinite for loop**
+
 If the test condition in a for loop is always true, it runs forever (until memory is full). For example,
 
 ```node
@@ -123,3 +124,57 @@ for(let i = 1; i > 0; i++) {
     // block of code
 }
 ```
+
+** 2. while loop**
+
+```node
+let x = 10;
+while(x > 0){
+    x = x-1;
+    if(x%2 == 0){
+        console.log('even', x)
+        continue;
+    }
+    console.log('odd', x);
+}
+```
+
+** 3. Do while loop**
+
+```node 
+var i = 20;
+do{
+    console.log(i);
+    i++;
+}while(i <= 25)
+```
+
+**Output**
+
+```node
+20
+21
+22
+23
+24
+25
+```
+
+** 4. for-in loop**
+
+```node
+j = {name: "mern", type: 'course', lang: 'javascript'}
+for(let k in j){
+    console.log(k)
+}
+j = {name: 'mern', type: 'course', lang: 'javascript'}
+for(let k in j){
+    console.log(j[k]);
+}
+```
+
+
+**Reference**
+
+[JavaScript Loops Explained](https://www.freecodecamp.org/news/javascript-loops-explained-for-loop-for/)
+[JavaScript Loops](https://www.javatpoint.com/javascript-loop)
