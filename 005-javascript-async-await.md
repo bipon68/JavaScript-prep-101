@@ -74,4 +74,4 @@ Your grade is A. Congratulation! You have passed
 
 **Reference**
 
-[JavaScript Loops Explained](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
+[Async function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
