@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming fundamentals using javascript</title>
+</head>
+<body>
+    <h3>Programming fundamentals using javascript</h3>
+
+    <script>
+
+        // Don't use if statement to add properties to an object in #javascript use Logical And and Spread operators instead
+        const salary = null;
+        const pension = 30000;
+        const employee = {
+            id: Math.floor(Math.random() * 10000),
+            name: "Bipon Biswas",
+            ...(salary && {salary}),
+            ...(pension && {pension})
+        }
+        console.log(employee)
+
+/* convert array to union type */
+// const allowedValues = ['typescript', 'javascript', 'es6', 'esNext'] as const;
+// type ArrayToUnion = typeof allowedValues[number];
+
+// const invalidValue: ArrayToUnion = 'Hello';
+// const validValue: ArrayToUnion = 'typescript';
+
+        /*---  Variables ---*/
+//         const names = [
+//             'HM Nayeem',
+//             'Aditya Chakraborty',
+//             'Abu Rayhan',
+//             'Shaker Hossain',
+//             'Akib Ahmad',
+//             'Alvi Chowdhury',
+//         ];
+// let index = -1;
+// let person = names[++index];
+// // console.log(person)
+
+// setInterval(() => {
+//     person = names[index++];
+//     console.log(person, person.length);
+
+//     if (index === names.length) {
+//         index = 0;
+//     }
+// }, 1000);
+
+/*---- Loop ----*/
+// for (let i = 1; i <= 10; i++) {
+//     console.log(i, 'We love Bangladesh');
+// }
+
+//How to loop through array in JavaScript
+const people = ["Sam", "Alex", "Charlie"];
+
+// people.forEach(person => {
+//   console.log(person);
+// });
+
+/* ---- While Loop ----*/
+
+// while (true) {
+//     let num = Math.ceil(Math.random() * 100);
+//     console.log(num, 'We love Bangladesh');
+//     if (num === 71) break;
+// }
+
+/* ---- Do While Loop ----*/
+// do{
+//     console.log("It will run at least once")
+// }while(false)
+
+/* ---- Array ----*/
+// const persons = ['Rayhan', 'Alvi', 'Anik', 'Arjun', 'Ayman'];
+
+// for (let i = 0; i < 5; i++) {
+//     console.log(persons[i]);
+// }
+
+/* ---- Object ----*/
+
+// const student = ['Abu', 'Rayhan', 'rayhan@example.com', 25, true];
+// sendEMail(student[0]);
+
+// function sendEmail(email) {
+//     console.log('Sending Email to ', email);
+// }
+
+// const students = {
+//     firstName: 'Abu',
+//     secondName: 'Rayhan',
+//     email: 'rayhan@example.com',
+//     age: 25,
+//     attend: true,
+// };
+
+// sendEMail(students.email);
+
+// function sendEmail(email) {
+//     console.log('Sending Email to ', email);
+// }
+
+// const student1 = {
+//     firstName: 'Abu',
+//     secondName: 'Rayhan',
+//     email: 'rayhan@example.com',
+//     age: 25,
+//     attend: true,
+// };
+
+// const student2 = {
+//     firstName: 'Alvi',
+//     secondName: 'Chowdhury',
+//     email: 'alvi@example.com',
+//     age: 25,
+//     attend: true,
+// };
+
+// const student3 = {
+//     firstName: 'Akib',
+//     secondName: 'Ahmad',
+//     email: 'akib@example.com',
+//     age: 25,
+//     attend: true,
+// };
+
+// const allStudents = [student1, student2, student3];
+
+// for (let i = 0; i < allStudents.length; i++) {
+//     sendEmail(allStudents[i].email);
+// }
+
+// function sendEmail(email) {
+//     console.log('Sending email to', email);
+// }
+
+/*----  Functions ----*/
+
+// allStudents.forEach((item) => console.log('Email ', item.email));
+// allStudents.forEach((item) =>
+//     console.log('Full Name ', item.firstName, item.secondName)
+// );
+
+function nameOfFunction(name) {
+    console.log('Hello', name);
+}
+
+// nameOfFunction('Murshed'); // Hello Murshed
+// nameOfFunction('Fahim'); // Hello Fahim
+// nameOfFunction(); // Hello undefined
+
+// function nameOfFunction(name) {
+//     if (!name) {
+//         console.log('Please provide your name');
+//     } else {
+//         console.log('Hello', name);
+//     }
+// }
+
+// nameOfFunction('Murshed'); // Hello Murshed
+// nameOfFunction('Fahim'); // Hello Fahim
+// nameOfFunction(); // Please provide your name
+
+// function generateRandomNumber(min, max) {
+//     const randomNumber = Math.floor(Math.random() * min + (max - min));
+//     return randomNumber;
+// }
+
+// console.log(generateRandomNumber(5, 10));
+// console.log(generateRandomNumber(85, 100));
+
+/*---- Expression vs Statement ----*/
+
+const name1 = 'Rayhan'; // Statement
+const name2 = 'Alvi'; // Statement
+const name3 = 'Anik'; // Statement
+const name4 = 'Arjun'; // Statement
+const name5 = 'Ayman'; // Statement
+
+const students = [
+    'Rayhan',
+    'Alvi',
+    'Anik',
+    'Arjun',
+    'Ayman',
+    'Ayuub',
+    'Bidyut',
+]; // Statement
+
+console.log(students[0]); // Expression
+console.log(students[1]); // Expression
+console.log(students[2]); // Expression
+console.log(students[3]); // Expression
+console.log(students[4]); // Expression
+
+for (let i = 0; i < students.length; i++) {
+    console.log(students[i], students[i].toLowerCase()); // Expression
+} // Statement
+
+name1.sendEmail(); // Expression
+name2.sendEmail(); // Expression
+name3.sendEmail(); // Expression
+name4.sendEmail(); // Expression
+name5.sendEmail(); // Expression
+
+const nums = [1, 2, 3, 4, 5, 6]; // Statement
+const bools = [true, true, false, false]; // Statement
+const nulls = [null, null, null]; // Statement
+const undefineds = [undefined, undefined, undefined]; // Statement
+const arrayOfArray = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+]; // Statement
+const mixed = [true, null, 'Str', 5, [12, 2, 4]]; // Statement
+
+const student1 = {
+    firstName: 'Abu',
+    secondName: 'Rayhan',
+    email: 'rayhan@example.com',
+    age: 25,
+    attend: true,
+}; // Statement
+
+const student2 = {
+    firstName: 'Alvi',
+    secondName: 'Chowdhury',
+    email: 'alvi@example.com',
+    age: 25,
+    attend: true,
+}; // Statement
+
+const student3 = {
+    firstName: 'Akib',
+    secondName: 'Ahmad',
+    email: 'akib@example.com',
+    age: 25,
+    attend: true,
+}; // Statement
+
+const allStudents = [student1, student2, student3]; // Statement
+
+for (let i = 0; i < allStudents.length; i++) {
+    sendMail(allStudents[i].email); // Expression
+} // Statement
+
+function sendMail(email) {
+    console.log('Sending email to', email);
+} // Statement
+
+allStudents.forEach((item) => console.log('Email ', item.email)); // Expression
+allStudents.forEach((item) =>
+    console.log('Full Name ', item.firstName, item.secondName)
+); // Expression
+
+function nameOfFunction(name) {
+    if (!name) {
+        console.log('Please provide your name');
+    } else {
+        console.log('Hello', name);
+    }
+} // Statement
+
+nameOfFunction('Murshed'); // Expression
+nameOfFunction('Fahim'); // Expression
+nameOfFunction(); // Expression
+
+function generateRandomNumber(min = 1, max) {
+    const randomNumber = Math.floor(Math.random() * min + (max - min)); // Statement
+    return randomNumber; // Expression
+} // Statement
+
+console.log(generateRandomNumber(5, 10)); // Expression
+
+    </script>
+    
+</body>
+</html>

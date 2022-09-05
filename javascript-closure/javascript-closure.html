@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Closure</title>
+</head>
+<body>
+    <h3>Javascript Closure</h3>
+    <p id="demo"></p>
+
+    <script>
+        // let a = 10;
+        // function my_function(){
+        //     let b = 20;
+        //     document.write(a+b)
+        // }
+        // my_function();
+
+        // var a = 10;
+        // function first_func(){
+        //     var b = 20;
+        //     function second_func(){
+        //         var c = a+b;
+        //         return c;
+        //     }
+        //     return second_func();
+        // }
+        // var sum = first_func();
+        // document.write("The sum is " + sum + '<br>')
+        function temporary(){
+            let counter = 0;
+
+            return function(){
+                // counter +=1;
+                console.log("Death Closure")
+            }
+        }
+        const add = temporary();
+        console.dir(add)
+        add();
+    </script>
+    
+</body>
+</html>

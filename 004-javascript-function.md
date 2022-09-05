@@ -1,24 +1,36 @@
-### JavaScript for loop, while loop
-loops are used to repeat a block of code.
+### JavaScript Function
+When JavaScript reaches a return statement, the function will stop executing.
 
-**JavaScript for loop**
-The syntax of the **for** loop is:
+**Why Functions?**
+
+You can reuse code: Define the code once, and use it many times.
+You can use the same code many times with different arguments, to produce different results.
+
+**Example**
+Convert Fahrenheit to Celsius:
+
+```node 
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+document.getElementById("demo").innerHTML = toCelsius(77);
+```
+
+**Function Return Example**
+Calculate the product of two numbers, and return the result:
 
 ```node
-for (initialExpression; condition; updateExpression) {
-    // for loop body
+let x = myFunction(4, 3);   // Function is called, return value will end up in x
+
+function myFunction(a, b) {
+  return a * b;             // Function returns the product of a and b
 }
 ```
-Here,
+**Output**
 
-1. The **initialExpression** initializes and/or declares variables and executes only once.
-2. The **condition** is evaluated.
-	- If the condition is **false**, the **for** loop is terminated.
-	- If the condition is **true**, the block of code inside of the **for** loop is executed.
-3. The **updateExpression** updates the value of **initialExpression** when the condition is true.
-4. The **condition** is evaluated again. This process continues until the condition is **false**.
-
-![dd](./images/loop.png)
+```node
+12
+```
 
 **Flowchart of JavaScript for loop**
 

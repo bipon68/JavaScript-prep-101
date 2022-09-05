@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript map filter reduce</title>
+</head>
+<body>
+    <h3>Javascript map filter reduce</h3>
+    <p id="demo"></p>
+
+    <script>
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+        // Durations are in minutes 
+const tasks = [
+  {
+    'name'     : 'Write for Learning',
+    'duration' : 120
+  },
+  {
+    'name'     : 'Work out',
+    'duration' : 60
+  },
+  {
+    'name'     : 'Movie',
+    'duration' : 60
+  }
+];
+// const task_names = [];
+// for (let i = 0; i < tasks.length; i +=1){
+//     task_names.push(tasks[i].name)
+// }
+// console.log(task_names)
+
+// const task_names = [];
+  
+// tasks.forEach(function (task) {
+//     task_names.push(task.name);    
+// });
+ 
+// console.log(task_names) 
+
+/*Using map, we can simply write: */
+// const task_names = tasks.map(function(task, index, array){
+//     return task.name;
+// })
+// console.log(task_names)
+
+let map = function (array, callback){
+    const new_array = [];
+
+    array.forEach(function(element, index, array){
+        new_array.push(callback(element));
+    })
+    return new_array;
+};
+// console.log(map)
+
+const words = ['Python', 'Javascript', 'Go', 'Java', 'PHP', 'Ruby'];
+const result = words.filter(word => word.length < 8);
+// console.log(result);
+
+// const difficult_tasks = [];
+
+// tasks.forEach(function (task){
+//     if(task.duration >= 120){
+//         difficult_tasks.push(task)
+//     }
+// })
+// console.log(difficult_tasks)
+
+const difficult_tasks = tasks.filter(task => task.duration >=120)
+// console.log(difficult_tasks)
+
+/*reduce */
+// let numbers = [1,2,3,4,5], total = 0;
+// numbers.forEach(function (number){
+//     total +=number;
+// })
+// console.log(total)
+
+// const total = [1,2,3,4,5].reduce(function(previou, current){
+//     return previou + current;
+// }, 0)
+// console.log(total)
+
+const total = [1, 2, 3, 4, 5].reduce(function (previous, current, index) {
+    const val = previous + current;
+    console.log("The previous value is " + previous + 
+                "; the current value is " + current +
+                ", and the current iteration is " + (index + 1));
+    return val;
+}, 0);
+  
+// console.log("The loop is done, and the final value is " + total + ".");
+
+const numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num){
+    return total - num;
+}
+
+        
+
+        
+    </script>
+    
+</body>
+</html>
