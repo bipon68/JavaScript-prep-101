@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript CallStack</title>
+</head>
+<body>
+    <h3>Javascript CallStack</h3>
+
+    <script>
+        
+        function ceo(){
+            console.log("Let's make a dent in the univers");
+            cto()
+        }
+        function cto(){
+            console.log("Let's make a gamechange product")
+            vpeng()
+        }
+        function vpeng(){
+            console.log("Let's make a Javascript framework")
+            techlead()
+        }
+        function techlead(){
+            console.log("Let's make a port angular typescript")
+            developer()
+        }
+        function developer(){
+            console.log("Let's copy some code from Stackoverflow")
+            throw new Error("The code did'n work")
+        }
+        // ceo();
+
+        function firstFunction(){
+  throw new Error('Stack Trace Error');
+}
+
+function secondFunction(){
+  firstFunction();
+}
+
+function thirdFunction(){
+  secondFunction();
+}
+
+// thirdFunction();
+
+function firstFunction(){
+  console.log("Hello from firstFunction");
+}
+
+function secondFunction(){
+  firstFunction();
+  console.log("The end from secondFunction");
+}
+
+// secondFunction();
+
+function callMyself(){
+  callMyself();
+}
+
+callMyself();
+
+        
+    </script>
+    
+</body>
+</html>
