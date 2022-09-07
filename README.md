@@ -41,6 +41,8 @@
 - [ ] Clean Code
 
 
-### Playlist
+### Reference
+
+- [33-js-concepts](https://github.com/priya42bagde/33-js-concepts)
 - [Namaste JavaScript](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
 - [DSA in JavaScript](https://www.youtube.com/playlist?list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7)
