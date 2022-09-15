@@ -142,7 +142,7 @@ function myFunc(total, num){
 
 
 **Reference**
-
+[ap, Filter, and Reduce](https://zonayed.js.org/daily/post-1),
 [How to Use Map, Filter, and Reduce in JavaScript](https://code.tutsplus.com/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209),
 [JavaScript Map, Reduce, and Filter](https://www.freecodecamp.org/news/javascript-map-reduce-and-filter-explained-with-examples/),
 [.map(), .reduce(), and .filter()](https://medium.com/poka-techblog/simplify-your-javascript-use-map-reduce-and-filter-bd02c593cc2d),

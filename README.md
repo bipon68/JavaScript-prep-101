@@ -6,8 +6,8 @@
 ### JavaScript
 
 **Fundamentals**
-- [ ] Call Stack
-- [ ] Primitive Types
+- [x] Call Stack
+- [x] Primitive Types
 - [ ] Value Types and Reference Types
 - [ ] Implicit, Explicit, Nominal, Structuring and Duck Typing
 - [ ] == vs === vs typeof
@@ -24,14 +24,14 @@
 - [ ] new, Constructor, instanceof and Instances
 - [ ] Prototype Inheritance and Prototype Chain
 - [ ] Object.create and Object.assign
-- [ ] map, reduce, filter
+- [x] map, reduce, filter
 - [ ] Pure Functions, Side Effects, State Mutation and Event Propagation
 - [ ] Closures
 - [ ] High Order Functions
 - [ ] Recursion
 - [ ] Collections and Generators
-- [ ] Promises
-- [ ] async/await
+- [x] Promises
+- [x] async/await
 - [ ] Data Structures
 - [ ] Expensive Operation and Big O Notation
 - [ ] Algorithms
@@ -46,3 +46,4 @@
 - [33-js-concepts](https://github.com/priya42bagde/33-js-concepts)
 - [Namaste JavaScript](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP)
 - [DSA in JavaScript](https://www.youtube.com/playlist?list=PL8p2I9GklV47TMMnPzqnkCtSOS3ebr4O7)
+- [JavaScript Questions](https://github.com/lydiahallie/javascript-questions)

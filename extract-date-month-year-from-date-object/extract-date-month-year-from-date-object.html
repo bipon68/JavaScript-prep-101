@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Date, Month, Year from the Date object</title>
+</head>
+<body>
+    <!-- <h3>How to extract Date, Month, Year from the Date object?</h3> -->
+    <h3>Displaying the Object using 𝐎𝐛𝐣𝐞𝐜𝐭.𝐯𝐚𝐥𝐮𝐞𝐬()</h3>
+    <p id="demo"></p>
+
+    <script>
+
+        let date = new Date();
+        //console.log(date)
+        // date is a Date object
+        // Time of Bangladesh is  +06 GMT
+
+
+        
+        const [Day, Month, Year] = [date.getDate(), date.getMonth()+ 1, date.getFullYear()]
+        //console.log(Day, Month, Year);
+
+        /*But what if want data should be in UTC we can do this also*/
+        const [Days, Months, Years] = [date.getUTCDate(), date.getUTCMonth()+ 1, date.getUTCFullYear()];
+        //console.log(Days, Months, Years)
+
+        //Displaying a JavaScript object will output [object Object].
+        // const person = {
+        //     firstName : "Bipon",
+        //     lastName : "Biswas"
+        // }
+        // document.getElementById("demo").innerHTML = person
+
+        // Displaying the Object Properties 𝐛𝐲 𝐧𝐚𝐦𝐞
+        // document.getElementById("demo").innerHTML = person.firstName
+
+        // Displaying the Object Properties 𝐢𝐧 𝐚 𝐋𝐨𝐨𝐩
+        // let display = document.getElementById("demo")
+        // let txt = "";
+        // const person = {
+        //     firstName : "Bipon",
+        //     lastName : "Biswas"
+        // }
+
+        // for(let key in person){
+        //     txt +=person[key] + " ";
+        //     console.log(key)
+        // }
+        // display.innerHTML = txt;
+
+        // Displaying the Object using 𝐎𝐛𝐣𝐞𝐜𝐭.𝐯𝐚𝐥𝐮𝐞𝐬()
+        // let display = document.getElementById("demo")
+        // const person = {
+        //     firstName: "Bipon",
+        //     lastName: " Biswas"
+        // }
+        // display.innerHTML = Object.values(person)
+
+        // JavaScript Objects are Mutable
+        let x = 21;
+        let y = x;
+        //console.log(x, y) // 21 21
+
+        x = 22;
+        //console.log(x, y) // 22 21
+
+
+
+        /*
+            x and y comes in primitive data types. 
+            And all primitive data types are Immutable.
+
+            Means, They are addressed by value.
+
+            Here Y is creating a copy of x.
+            Means Y have value of x
+        */
+
+        /*
+            Therefore we have changed the value of x but y is not affected, it's create a copy of x
+        */
+
+        let person = {
+            firstName : "Bipon"
+        }
+        let newperson = person;
+        person.lastName = "Biswas";
+
+        console.log("person ", person)
+        console.log("newperson", newperson)
+
+        /*
+            Object are mutable, They are addressed by reference, not by value.
+
+            Here, newperson is not creating a copy of person.
+
+            The object newperson is not a copy of person. 
+            Both newperson and person are the same object.
+
+            Any changes to newperson, will also change person, Because newperson and person are the same ojbect.
+        */
+
+
+        
+    </script>
+    
+</body>
+</html>
