@@ -52,21 +52,35 @@
         const dataFromRemote = fetch('https://jsonplaceholder.typicode.com/posts');
         console.log('Data from Remote', dataFromRemote);
 
-        dataFromRemote
-        .then((data) => {
-            return data.json();
-            //console.log(data)
-        }).then((post) => {
-            console.log('Data from Remote', post)
-        }).catch((err) => {
-            console.log('Your error : ', err)
-        })
+        // dataFromRemote
+        // .then((data) => {
+        //     return data.json();
+        //     //console.log(data)
+        // }).then((post) => {
+        //     console.log('Data from Remote', post)
+        // }).catch((err) => {
+        //     console.log('Your error : ', err)
+        // })
 
-        fetch('https://jsonplaceholder.typicode.com/posts')
-        .then((data) => {
-            return data.json();
-        }).then((post) => {
-            console.log(post)
+        // fetch('https://jsonplaceholder.typicode.com/posts')
+        // .then((data) => {
+        //     return data.json();
+        // }).then((post) => {
+        //     console.log(post)
+        // })
+
+        let p = new Promise((resolve, reject) => {
+            let a = 1 + 2;
+            if( a == 2){
+                resolve('Success')
+            }else{
+                reject('Failed')
+            }
+        })
+        p.then((message) => {
+            console.log('This is in the then ' + message);
+        }).catch((message) => {
+            console.log('This is in the catch ' + message)
         })
         
     </script>

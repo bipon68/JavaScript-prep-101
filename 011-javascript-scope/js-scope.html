@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Scope</title>
+</head>
+<body>
+    <h3>Javascript Scope</h3>
+
+    <script>
+        
+        function localScope(){
+            var local = 'I am local to my own function';
+            console.log(local)
+        }
+        // localScope();
+        // console.log(local)
+
+
+        var globalVar = 'I am a Global Variable';
+
+function globalScope() {
+   console.log('Inside a Function: ' + globalVar);
+}
+
+// globalScope();
+
+// console.log('Outside: ' + globalVar);
+
+function globalFunc() {
+   console.log('Global Function');
+}
+// globalFunc()
+
+function anoGlobalFunc() {
+   console.log('Global Function');
+   function localFunc() {
+      console.log('Local Function');
+   }
+   localFunc();
+}
+// anoGlobalFunc();
+// localFunc()
+
+var person = {
+   name: 'Bipon Biswas',
+   age: 25
+}
+function objectFunc() {
+   var localObj = {
+      name: 'Bipon Biswas',
+      age: 25
+   }
+   console.log(localObj);
+}
+// objectFunc()
+
+function parentFunction(){
+    var a = 9;
+    function childFunction(){
+        var b = 11;
+        // console.log('Sum : ' + (a+b))
+        function childFunctionC(){
+            var c = 10
+            console.log('Sum3 : ' + (a + b + c))
+        }
+        childFunctionC()
+    }
+    childFunction();
+    
+}
+parentFunction()
+
+        
+    </script>
+    
+</body>
+</html>

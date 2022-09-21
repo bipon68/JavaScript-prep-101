@@ -192,8 +192,8 @@ fetch('https://jsonplaceholder.typicode.com/posts')
 })
 ```
 
-![dd](./images/return-fetch-data-from-remote.png.png)
+![dd](./images/return-fetch-data-from-remote.png)
 
 **Reference**
 
-[Call Stack](https://github.com/priya42bagde/33-js-concepts#1-call-stack)
+[JavaScript Promises In 10 Minutes](https://www.youtube.com/watch?v=DHvZLI7Db8E)
