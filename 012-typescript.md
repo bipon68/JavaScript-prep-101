@@ -1,36 +1,95 @@
-### JavaScript Scope
-JavaScript Scope
+## Typescript
+
+### 2.1 Basic Type
+
+#### Data types in TypeScript
+
+Since, TypeScript is a superset of JavaScript. Therefore, TypeScript inherits JavaScript's built-in data types and adds some additional data types.
 
 
-**JavaScript Scope ?**
+1. Primitive data type
 
-Need to know where you can access or use your declared variables/functions. If you want to make a variable or function private or if you want to access a variable from everywhere, how or where to declare it.
+2. Non-primitive data type
 
-There are mainly two types of scoping in JavaScript:
+#### Primitive data type
+- Boolean
+- Number
+- String
+- Null
+- Undefined
+- Void
+- Any
+#### Non-primitive data type
+- Array
+- Class
+- Function
+- Tuple
+- Interface
+- Enum
+- Generic
+- Decorators
 
-1. Local scope
-
-2. Global scope
-
-The main topics discussed in scoping are:
-
-- Where can you access your variable or function?
-- Each new function creates a scope
-- Parent-child relationship in lexical scoping
-- A variable declared in one function cannot be passed to another function, i.e. cannot be accessed.
+**Boolean**
 
 ```node
-function localScope() {
-   var local = 'I am local to my own function';
-   console.log(local);
+let isDied: boolean = false;
+```
+
+**Number**
+
+```node
+let decimal: number = 6;
+let hex: number = 0xf00d;
+let binary: number = 0b1010;
+let octal: number = 0o744;
+let big: bigint = 100n;
+```
+
+**String**
+```node
+let color: string = “Gray”;
+```
+
+**null and undefined**
+```node
+let counter: number = null;
+let isDied: boolean = null;
+let name: string = null;
+```
+
+**undefined**
+```node
+let counter: number = null;
+let isDied: boolean = null;
+let name: string = null;
+```
+
+**Void**
+```node
+function getInfo(firstName: string, lastName: string): void {
+console.log(`${firstName} ${lastName}`);
 }
 ```
 
-Calling it will show the correct output:
-
+**any**
 ```node
-localScope();
+let anyValue: any;
+anyValue = 420;
+anyValue = “Bangladesh”;
+anyValue = true;
 ```
+
+**array**
+First, you need to decide which data type to use and use [] with that type:
+```node
+let list: number[] = [45, 41, 220];
+```
+The second way is by using a generic array type:
+```node
+let list: Array<number> = [45, 41, 220];
+```
+
+
 
 ![dd](./images/local-scope.png)
 
